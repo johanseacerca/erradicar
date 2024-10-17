@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    overflow: hidden; /* Deshabilita el scroll al inicio */
+    height: 100vh; /* Fija el contenido en pantalla */
+}
+
+/* Popup de alerta */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 30px;
+    border: 5px solid yellow;
+    z-index: 100;
+    text-align: center;
+}
+
+#popup h1 {
+    font-size: 2rem;
+}
+
+#popup button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Imágenes del "virus" */
+#virus-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
+.virus-image {
+    position: absolute;
+    width: 200px;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+/* Animación para mover las imágenes */
+@keyframes moveRandomly {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 20%;
+        left: 70%;
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+    75% {
+        top: 80%;
+        left: 20%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.moving {
+    animation: moveRandomly 10s infinite;
+}
+
+/* Estilos para la página del director */
+#director-page {
+    display: block;
+    background-color: white;
+    color: black;
+    overflow: auto;
+    height: auto; /* Permitir el scroll */
+    max-height: 100%; /* Limitar el alto máximo */
+}
+
+header {
+    background-color: #2a7ae2;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('director-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+}
+
+.info-section, .message-section, .contact-section {
+    padding: 2rem;
+    background-color: white;
+    color: black;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #2a7ae2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hidden {
+    display: none;
+}
